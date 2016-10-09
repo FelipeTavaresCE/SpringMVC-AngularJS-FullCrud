@@ -7,7 +7,7 @@ Crud integrating Spring MVC and AngularJS.
 -Then you can see the models and check in which specific brand it was added.
 -After that, it's possible to add a car by choosing both a brand and a model that is registered in the database already.
 -There are options available to edit the records.
-- Materiliaze CSS framework was used for styling.
+- Materialize CSS framework was used for styling.
 - MySQL for database.
 - You will have to have jackson library in your classpath.
 -The fact that I'm not a native English speaker I really hope it's all clear enough.
