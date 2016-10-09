@@ -1,0 +1,43 @@
+<h4>Cars</h4>
+<div clas="row">
+    <table class="responsive">
+        <thead>
+            <tr>
+                <th>Edit</th>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Price</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="car in listCars">
+                <td> 
+                    <a href="#/listcars" ng-show="show" ng-click="deleteCar(car)"><i class="fa fa-trash-o"></i> </a>
+                    <a href="#/listcars" ng-show="show" ng-click="editCar(car.idCar)"><i class="fa fa-edit"></i> </a>
+                    <a href="#/listcars" ng-hide="hide" ng-click="saveCar(car)"><i class="fa fa-check-square"></i> </a>
+                    <a href="#/listcars" ng-hide="hide" ng-click="undoEdit()"><i class="fa fa-undo"></i> </a>
+                </td>
+
+                <td>{{car.brand.nameBrand}}</td>
+                <td> {{car.model.nameModel}}</td>
+
+                <td ng-show="car.idCar == idCar">
+                    <input type="text" id="editCar" class="input-field col s7" ng-model="car.price">
+                </td>
+
+                <td ng-show="car.idCar == idCar">
+                    <input type="text" id="editCar" class="input-field col s1" ng-model="car.year">
+                </td>
+
+                <td ng-hide="car.idCar == idCar">${{car.price}}</td>
+                <td ng-hide="car.idCar == idCar">{{car.year}}</td>
+
+            </tr>
+        </tbody>
+    </table><br><br>
+    <div>
+        <a href="#/home" class="btn" id="btnNav">Take me home please</a>
+        <a href="#/car" class="btn" id="btnNav2">I feel like adding another car</a>
+    </div>
+</div>

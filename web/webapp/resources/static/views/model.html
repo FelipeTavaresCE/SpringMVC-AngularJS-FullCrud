@@ -1,0 +1,27 @@
+<h1>Add a new model</h1>
+<div class="row">
+    <form class="col s6 push-s3">
+        <div class="row">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input type="text" class="validate" ng-model="model.nameModel">
+                <label>Name</label>
+
+            </div>
+
+            <div class="input-field col s4">
+                <select class="browser-default" ng-model="model.brand.idBrand">
+                    <option value="" disabled selected>Choose the brand</option>
+                    <option value="{{obj.idBrand}}" ng-repeat="obj in listBrand">{{obj.nameBrand}}</option>
+
+                </select><br>
+                <div class="col s8 pull-s8">
+                    <a class="waves-block btn" id="btnNav" ng-click="createModel()"><i class="fa fa-automobile"></i></a>
+                </div>
+                <div class="col s8 pull-s8">
+                    <a href="#/home" class="waves-block btn" id="btnNav2"><i class="fa fa-home"></i></a>
+                </div>
+
+            </div>
+    </form>
+</div>

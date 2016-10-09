@@ -1,0 +1,34 @@
+<h4>Models</h4>
+<div clas="row">
+    <table class="centered">
+        <thead>
+            <tr>
+                <th data-field="id">Edit</th>
+                <th data-field="name">Name</th>
+                <th data-field="name">Brand</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="model in listModel">
+                <td> 
+                    <a href="#/listmodels" ng-show="show" ng-click="deleteModel(model)"><i class="fa fa-trash-o"></i> </a>
+                    <a href="#/listmodels" ng-show="show" ng-click="editModel(model.idModel)"><i class="fa fa-edit"></i> </a>
+                    <a href="#/listmodels" ng-hide="hide" ng-click="saveModel(model)"><i class="fa fa-check-square"></i> </a>
+                    <a href="#/listmodels" ng-hide="hide" ng-click="undoEdit()"><i class="fa fa-undo"></i> </a>
+                </td>
+
+                <td ng-show="model.idModel == idModel">
+                    <input type="text" id="editModel" class="input-field col s8" ng-model="model.nameModel">
+                </td>
+
+                <td ng-hide="model.idModel == idModel">{{model.nameModel}}</td>
+
+                <td>{{model.brand.nameBrand}}</td>
+            </tr>
+        </tbody>
+    </table><br><br>
+    <div>
+        <a href="#/home" class="btn" id="btnNav">Take me home please</a>
+        <a href="#/model" class="btn" id="btnNav2">I feel like adding another model</a>
+    </div>
+</div>
