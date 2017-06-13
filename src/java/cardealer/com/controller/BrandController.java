@@ -28,8 +28,11 @@ public class BrandController {
     public @ResponseBody Brand createBrand(@RequestBody Brand brand) {
         if (!dao.brandVerification(brand)) {
             dao.createBrand(brand);
+             return brand;
+        }else{
+            return null;
         }
-        return brand;
+       
     }
 
     //Send via get to AngularJS controller a list of brands already created. Nothing unusual though.
