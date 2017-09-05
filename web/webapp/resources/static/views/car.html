@@ -1,15 +1,12 @@
 <h4>Add a new car</h4>
 <div class="row">
     <form class="col s6 push-s5" >
-
         <div class="row">
             <div class="input-field col s4">
                 <select class="browser-default" ng-model="car.brand.idBrand" ng-change="change()">
                     <option value="" disabled selected>Choose brand</option>
                     <option value="{{obj.idBrand}}" ng-repeat="obj in brands">{{obj.nameBrand}}</option>
-
                 </select>
-
             </div>
         </div>
 
@@ -18,8 +15,7 @@
                 <select ng-disabled="showModels" class="browser-default" ng-model="car.model.idModel">
                     <option value="" disabled selected>Choose model</option>
                     <option value="{{obj2.idModel}}" ng-repeat="obj2 in modelsToPost">{{obj2.nameModel}}</option>
-
-                </select>
+               </select>
             </div>
         </div>
 
@@ -33,6 +29,7 @@
                 <input placeholder="Year" type="text" class="validate" ng-model="car.year">
             </div>
         </div>
+        
         <div class="col s2 pull s1">
             <a class="waves-block btn" id="btnNav" ng-click="createCar()"><i class="fa fa-automobile"></i></a>
         </div>
@@ -40,6 +37,5 @@
         <div class="col s2 pull s1">
             <a href="#/home" class="waves-block btn" id="btnNav2"><i class="fa fa-home"></i></a>
         </div>
-
     </form>
 </div>
